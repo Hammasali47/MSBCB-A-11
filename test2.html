@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <h1>test2</h1>
+        <script>
+            let sum = 0;
+            let subtract = 0;
+            const array =[-10,-9,-8,-7,-6,-5,-5-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10];
+            const posArray = [];
+            const negArray = [];
+
+            Add(array, (x) => x >= 0);
+            Subtract(array, (x) => x < 0);
+
+
+            function Add(numbers,callback){
+  for (const x of numbers) {
+    if (callback(x)) {
+        posArray.push(x);
+        sum = sum + x
+    }
+  }
+            }
+
+            function Subtract(numbers,callback){
+  for (const x of numbers) {
+    if (callback(x)) {
+        negArray.push(x);
+        subtract = subtract - x
+    }
+  }
+            }
+
+            console.log(posArray,negArray,subtract,sum)
+        </script>
+    </body>
+</html>
