@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            var ranNum = Math.ceil(Math.random() * 99) * (Math.round(Math.random()) ? 1 : -1)
+            console.log(ranNum)
+
+
+            for( let i=0 ;i<7; i++){
+            let num = prompt("Please enter number you have guessed");
+
+            console.log(num>ranNum,parseInt(num),ranNum)
+            if(parseInt(num)<ranNum){
+                alert("Number is smaller then random number");
+            }
+            else if(parseInt(num)>ranNum){
+                 alert("Number is larger then random number");
+            }
+            else if(parseInt(num)==ranNum){
+                alert("You have guessed it right");
+                break;
+            }
+        }
+
+        </script>
+    </body>
+</html>
